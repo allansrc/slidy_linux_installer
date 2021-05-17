@@ -9,8 +9,6 @@ mkdir $(pwd)/.temp_slidy_installer
 
 cd $(pwd)/.temp_slidy
 
-
-
 THEARCH=$(uname -m)
 THEBIT=$(getconf LONG_BIT)
 
