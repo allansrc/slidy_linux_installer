@@ -2,14 +2,14 @@
 cd $HOME
 if [[ -f .temp_slidy_installer ]]
 then
-  rm .temp_slidy_installer
+  rm -rf .temp_slidy_installer
 fi
 
 mkdir $(pwd)/.temp_slidy_installer
 
 cd $(pwd)/.temp_slidy
 
-echo "Cleaning environment ..."
+
 
 THEARCH=$(uname -m)
 THEBIT=$(getconf LONG_BIT)
@@ -24,4 +24,9 @@ fi
 
 tar -xvzf slidy_temp.tar.gz
 sudo cp slidy/slidy /usr/bin/
+
+echo "Cleaning environment ..."
+cd $HOME
+rm -rf .temp_slidy_installer
+
 slidy -v 
